@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DRUM KIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3></h3>
+    <div class="keys">
+        <div class="left-keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">heyhoney</span>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">openhat</span>
+            </div>
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">kick</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">hihat</span>
+            </div>
+        </div>
+        <div class="right-keys">
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound">ride</span>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound">clap</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>J</kbd>
+                <span class="sound">tom</span>
+            </div>
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+                <span class="sound">melody</span>
+            </div>
+        </div>
+    </div>
+    <!-- data attributes = 'data-' + 'key' -->
+    <!-- adds the class playing -->
+    <audio data-key="65" src="sounds/hey_honey_sample.wav"></audio>
+    <audio data-key="83" src="sounds/openhat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/hihat.wav"></audio>
+    <!-- <audio data-key="71" src="sounds/boom.wav"></audio> -->
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/clap.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/melody.wav"></audio>
+
+<script>
+    
+function playSound(e) {
+    // console.log(e.keyCode);
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    console.log(audio);
+    if(!audio) return; //stop function from running
+
+    audio.currentTime = 0; //rewind to the start
+
+    audio.play();
+
+    // animation
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    console.log(key);
+    key.classList.add('playing');
+
+    // setTimeout(function() {
+    // }, 0.07)
+};
+
+function removeTransition(e) {
+    // console.log(e)
+    if (e.propertyName!=='transform') return; //skip if its not transformed
+    // console.log(e.propertyName)
+    // after the transition time, we want to reverse everything (this = key)
+    this.classList.remove('playing');
+
+}
+
+// transition end event
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSound);
+
+</script>
+
+</body>
+
+
+</html>
