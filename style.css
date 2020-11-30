@@ -1,61 +1,67 @@
 html {
     font-size: 10px;
-    background: url('milk_video.png') bottom center;
-    background-size: cover;
   }
   
-  body,html {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  .keys {
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
-  .left-keys {
-    display: flex;
-    margin: 5rem;
-  }
+.content {
+  background: url('milk_video.png') bottom center;
+  background-size: cover;
+}
+  
+.keys {
+  backdrop-filter: blur(1px);
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
 
-  .right-keys {
-    display: flex;
-    margin: 5rem;
-  }
-  
-  .key {
-    border: .4rem solid white;
-    border-radius: 3rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 8rem;
-    text-align: center;
-    color: rgb(247, 255, 198);
-    background: rgba(255, 255, 255, 0.1);
-    text-shadow: 0 0 .5rem black;
-  }
-  
-  .playing {
-    transform: scale(1.1);
-    border-color: #5731ff;
-    box-shadow: 0 0 1rem #5731ff;
-  }
-  
-  kbd {
-    display: block;
-    font-size: 4rem;
-  }
-  
-  .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #8ce4ff;
-  }
+.left-keys {
+  display: flex;
+  margin: 5rem;
+  padding-top: 3rem;
+}
+
+.right-keys {
+  display: flex;
+  margin: 5rem;
+  padding-top: 3rem;
+}
+
+.key {
+  border: .4rem solid rgb(163, 238, 255);
+  border-radius: 3rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 8rem;
+  text-align: center;
+  color: rgb(247, 255, 198);
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #5731ff;
+  box-shadow: 0 0 1rem #5731ff;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffffff;
+}
