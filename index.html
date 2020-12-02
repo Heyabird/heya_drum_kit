@@ -8,6 +8,8 @@
 
 <body>
     <div class="content">
+        <img src='default.svg' id="img"/>
+
         <div class="keys">
             <div class="left-keys">
                 <div data-key="65" class="key">
@@ -80,6 +82,13 @@ function playSound(e) {
 
     // setTimeout(function() {
     // }, 0.07)
+
+    console.log(document.getElementById("img").src);
+    if (e.keyCode == '70' && document.getElementById("img").src.includes("default.svg")) {
+        document.getElementById("img").src = "headbang.svg" 
+    } else if (e.keyCode == '70' && document.getElementById("img").src.includes("headbang.svg")) {
+        document.getElementById("img").src = "default.svg" 
+    }
 };
 
 function removeTransition(e) {
