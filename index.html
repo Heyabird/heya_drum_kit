@@ -79,16 +79,19 @@ function playSound(e) {
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     console.log(key);
     key.classList.add('playing');
-
-    // setTimeout(function() {
-    // }, 0.07)
-
     console.log(document.getElementById("img").src);
     if (e.keyCode == '70' && document.getElementById("img").src.includes("default.svg")) {
         document.getElementById("img").src = "headbang.svg" 
     } else if (e.keyCode == '70' && document.getElementById("img").src.includes("headbang.svg")) {
         document.getElementById("img").src = "default.svg" 
+    } if (e.keyCode == '68') {
+        setTimeout (function() { document.body.style.background = 'radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)' });
+        setTimeout (function() { document.body.style.background = 'black' }, 200);
+    } if (e.keyCode == '74') {
+        setTimeout (function() { document.body.style.background = 'radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)' });
+        setTimeout (function() { document.body.style.background = 'black' }, 200);
     }
+
 };
 
 function removeTransition(e) {

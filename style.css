@@ -47,8 +47,8 @@ p {
 }
 
 .key {
-  border: .4rem solid rgb(163, 238, 255);
-  border-radius: 3rem;
+  border: 1px solid rgb(163, 238, 255);
+  border-radius: 5rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
