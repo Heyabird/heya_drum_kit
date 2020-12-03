@@ -77,9 +77,14 @@ p {
   width: 8rem;
   text-align: center;
   color: #8CE9D2;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   text-shadow: 0 0 .5rem black;
 }
+
+.special_key {
+  background-color: rgba(217, 255, 0, 0.4);
+}
+
 
 .playing {
   transform: scale(1.1);
@@ -109,4 +114,27 @@ kbd {
 
 a {
   color: rgb(163, 238, 255);
+}
+
+#mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #mobile {
+    display: inherit;
+    text-align: center;
+    float: center;
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    padding: 80px 20px;
+    font-weight: 300;
+  }
+  .content {
+    display: none;
+  }
+  
 }
