@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: black;
 
 }
@@ -19,15 +19,36 @@ p {
   background-size: 100%;
 }
 
+#flexbox {
+  display: flex;
+  padding: 0 5%;
+}
+
 #img {
   margin: auto;
   display: block;
   /* padding: 10%; */
 }
+
+.hey_honey {
+  display: none;
+  color: white;
+  font-size: 40px;
+  width: 40%;
+  text-align: center;
+  height: 500px;
+  line-height: 500px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.sparkle {
+  display: none;
+}
   
 .keys {
   /* backdrop-filter: blur(.5px); */
-  display: flex;#
+  display: flex;
   flex: 1;
   /* min-height: 93vh; */
   align-items: center;
@@ -47,15 +68,15 @@ p {
 }
 
 .key {
-  border: 1px solid rgb(163, 238, 255);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 5rem;
   margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
+  padding: 1.5rem .5rem;
   transition: all .07s ease;
   width: 8rem;
   text-align: center;
-  color: rgb(247, 255, 198);
+  color: #8CE9D2;
   background: rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 .5rem black;
 }
@@ -68,7 +89,8 @@ p {
 
 kbd {
   display: block;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: Roboto;
 }
 
 .sound {
@@ -79,8 +101,8 @@ kbd {
 }
 
 #footer {
-  color: white;
-  font-size: 20px;
+  color: rgb(211, 211, 211);
+  font-size: 18px;
   text-align: center;
   padding-bottom: 3rem;
 }

@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <title>HEYA DRUM KIT</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="content">
-        <img src='default.svg' id="img"/>
-
+        <div id="flexbox">
+            <div class="hey_honey">💗 hey</div>
+            <img class='sparkle' src='sparkle.svg'/>
+            <img src='default.svg' id="img"/>
+            <div class="hey_honey">honey 💗</div>
+            <img class='sparkle' src='sparkle.svg'/>
+        </div>
         <div class="keys">
             <div class="left-keys">
                 <div data-key="65" class="key">
@@ -59,7 +66,7 @@
         <audio data-key="74" src="sounds/clap.wav"></audio>
         <audio data-key="75" src="sounds/tambourine.wav"></audio>
         <audio data-key="76" src="sounds/melody.wav"></audio>
-        <p id="footer">Click <a href="https://www.youtube.com/watch?v=a_1zIb8RBJU" target="_blank"><b>here</b></a> for the full song and music video.</p>
+        <p id="footer">Start the melody, then play the drums over it. Click <a href="https://www.youtube.com/watch?v=a_1zIb8RBJU" target="_blank"><b>here</b></a> for the full song and music video.</p>
     </div>
 
 
@@ -90,6 +97,22 @@ function playSound(e) {
     } if (e.keyCode == '74') {
         setTimeout (function() { document.body.style.background = 'radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)' });
         setTimeout (function() { document.body.style.background = 'black' }, 200);
+    } if (e.keyCode == '72') {
+        document.getElementById("img").src = "bubbles.svg"
+        setTimeout (function() { document.getElementById("img").src = "default.svg" }, 500);
+    } if (e.keyCode == '83') {
+        document.getElementById("img").src = "tilt.svg"
+        setTimeout (function() { document.getElementById("img").src = "default.svg" }, 200);
+    } if (e.keyCode == '65') {
+        document.getElementsByClassName("hey_honey")[0].style.display="block";
+        document.getElementsByClassName("hey_honey")[1].style.display="block";
+        setTimeout (function() { document.getElementsByClassName("hey_honey")[0].style.display="none"; }, 600);
+        setTimeout (function() { document.getElementsByClassName("hey_honey")[1].style.display="none"; }, 600);
+    } if (e.keyCode == '75') {
+        document.getElementsByClassName("sparkle")[0].style.display="block";
+        document.getElementsByClassName("sparkle")[1].style.display="block";
+        setTimeout (function() { document.getElementsByClassName("sparkle")[0].style.display="none"; }, 300);
+        setTimeout (function() { document.getElementsByClassName("sparkle")[1].style.display="none"; }, 300);
     }
 
 };
