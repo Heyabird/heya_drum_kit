@@ -17,6 +17,11 @@ p {
 .content {
   /* background: url('milk_video.png') bottom center; */
   background-size: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
 #flexbox {
